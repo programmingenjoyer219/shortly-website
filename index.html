@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/script.js" defer></script>
+		<title>Shortly - My Version</title>
+	</head>
+	<body>
+		<!-- navbar and hero -->
+		<header>
+			<!-- container -->
+			<div class="container mx-auto w-full">
+				<!-- navbar -->
+				<nav class="relative flex items-center px-4 py-8">
+					<!-- icon and menu -->
+					<div class="flex items-center flex-1 justify-start">
+						<div class="flex items-center justify-center gap-12">
+							<!-- logo -->
+							<img src="./images/logo.svg" alt="" />
+							<!-- links -->
+							<div
+								class="hidden lg:grid grid-cols-3 gap-6 text-center font-semibold text-gray-400"
+							>
+								<a class="hover:text-veryDarkViolet" href="#">Features</a>
+								<a class="hover:text-veryDarkViolet" href="#">Pricing</a>
+								<a class="hover:text-veryDarkViolet" href="#">Resources</a>
+							</div>
+						</div>
+					</div>
+					<!-- login and sign up -->
+					<div
+						class="hidden lg:flex items-center justify-between gap-4 text-center font-semibold"
+					>
+						<a class="text-gray-400 hover:text-veryDarkViolet" href="#"
+							>Login</a
+						>
+						<a
+							class="text-white bg-cyan hover:bg-cyanLight px-6 py-3 rounded-full"
+							href="#"
+							>Sign Up</a
+						>
+					</div>
+					<!-- hamburger button -->
+					<button id="hamburger-button" class="relative h-8 w-8 lg:hidden">
+						<span id="hamburger-line-top"></span>
+						<span id="hamburger-line-middle"></span>
+						<span id="hamburger-line-bottom"></span>
+					</button>
+					<!-- mobile-menu -->
+					<div
+						id="mobile-menu"
+						class="absolute top-[100%] left-[50%] -translate-x-1/2 flex flex-col gap-8 w-full p-6 bg-darkViolet font-bold text-white text-center"
+					>
+						<a href="#">Features</a>
+						<a href="#">Pricing</a>
+						<a href="#">Resources</a>
+						<div class="w-full h-[1px] bg-gray-400"></div>
+						<a href="#">Login</a>
+						<a class="bg-cyan py-3 rounded-full" href="#">Sign Up</a>
+					</div>
+				</nav>
+				<!-- hero -->
+				<section
+					id="hero"
+					class="flex flex-col items-center gap-[6rem] pt-8 pb-[12rem] px-6 lg:grid lg:grid-cols-2 lg:grid-rows-1"
+				>
+					<!-- image -->
+					<img
+						class="col-start-2 col-end-3 row-start-1 row-end-2"
+						src="./images/illustration-working.svg"
+						alt=""
+					/>
+					<!-- info -->
+					<div
+						class="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2"
+					>
+						<h1>More than just shorter links</h1>
+						<p class="text-2xl text-gray-400">
+							Build your brand's recognition and get detailed insights on how
+							your links are performing.
+						</p>
+						<button class="cta">Get Started</button>
+					</div>
+				</section>
+			</div>
+		</header>
+
+		<!-- Shorten URL form section -->
+		<section id="shorten" class="bg-gray-100">
+			<div
+				class="container mx-auto w-full px-6 py-8 flex flex-col items-center text-center"
+			>
+				<div class="relative -top-[6rem] flex flex-col gap-4 w-full max-w-4xl">
+					<!-- form -->
+					<form
+						class="bg-darkViolet p-10 flex flex-col items-center gap-4 rounded-md shadow-lg md:flex-row"
+					>
+						<input
+							class="flex-1 p-4 rounded-md placeholder:text-yellow-500 outline-none w-full md:w-auto"
+							type="text"
+							placeholder="Shorten a link here"
+						/>
+						<button
+							class="bg-cyan hover:bg-cyanLight text-white text-center rounded-md px-8 py-4 w-full md:w-auto"
+						>
+							Shorten it!
+						</button>
+					</form>
+					<!-- result-1 -->
+					<div
+						class="p-6 bg-white rounded-md flex flex-col md:flex-row items-center gap-4 md:gap-0"
+					>
+						<div>
+							<!-- link -->
+							<span class="font-bold text-veryDarkViolet"
+								>https://frontendmentor.io</span
+							>
+						</div>
+
+						<div
+							class="flex-1 flex flex-col md:flex-row items-center justify-end gap-4"
+						>
+							<!-- shortened-link -->
+							<span class="font-bold text-cyan">https://rel.ink/k4IKyk</span>
+							<button
+								class="px-8 py-2 bg-cyan hover:bg-cyanLight text-white text-center rounded-md"
+							>
+								Copy
+							</button>
+						</div>
+					</div>
+					<!-- result-2 -->
+					<div
+						class="p-6 bg-white rounded-md flex flex-col md:flex-row items-center gap-4 md:gap-0"
+					>
+						<div>
+							<!-- link -->
+							<span class="font-bold text-veryDarkViolet">
+								https://twitter.com/frontendmentor
+							</span>
+						</div>
+
+						<div
+							class="flex-1 flex flex-col md:flex-row items-center justify-end gap-4"
+						>
+							<!-- shortened-link -->
+							<span class="font-bold text-cyan">https://rel.ink/gxOXp9</span>
+							<button
+								class="px-8 py-2 bg-darkViolet hover:bg-opacity-70 text-white text-center rounded-md"
+							>
+								Copy
+							</button>
+						</div>
+					</div>
+					<!-- result-3 -->
+					<div
+						class="p-6 bg-white rounded-md flex flex-col md:flex-row items-center gap-4 md:gap-0"
+					>
+						<div>
+							<!-- link -->
+							<span class="font-bold text-veryDarkViolet">
+								https://linkedin.com/frontend-mentor
+							</span>
+						</div>
+
+						<div
+							class="flex-1 flex flex-col md:flex-row items-center justify-end gap-4"
+						>
+							<!-- shortened-link -->
+							<span class="font-bold text-cyan">https://rel.ink/gob3X9</span>
+							<button
+								class="px-8 py-2 bg-cyan hover:bg-cyanLight text-white text-center rounded-md"
+							>
+								Copy
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Statistics section -->
+		<section id="statistics" class="bg-gray-100">
+			<!-- container -->
+			<div
+				class="container mx-auto w-full px-6 pt-8 pb-[12rem] flex flex-col items-center gap-[6rem] text-center"
+			>
+				<!-- text info -->
+				<div>
+					<h2 class="mb-4">Advanced Statistics</h2>
+					<p class="text-gray-400 max-w-lg">
+						Track how your links are performing across the web with our advanced
+						statistics dashboard.
+					</p>
+				</div>
+				<!-- cards -->
+				<div
+					class="flex flex-col items-center w-full md:flex-row md:justify-center md:items-start md:text-left"
+				>
+					<!-- card-1 -->
+					<div
+						class="relative bg-white rounded-md flex flex-col items-center gap-4 p-6 pt-12 w-full"
+					>
+						<!-- image -->
+						<div
+							class="absolute -top-[2.5rem] bg-veryDarkViolet rounded-full p-4 md:left-4"
+						>
+							<img src="./images/icon-brand-recognition.svg" alt="" />
+						</div>
+						<h3 class="text-xl font-bold text-veryDarkViolet w-full">
+							Brand Recognition
+						</h3>
+						<p class="text-gray-400">
+							Boost your brand recognition with each click. Generic links don't
+							mean a thing. Branded links help instil confidence in your
+							content.
+						</p>
+					</div>
+					<!-- blue-line -->
+					<div class="blue-line"></div>
+					<!-- card-2 -->
+					<div
+						class="relative bg-white rounded-md flex flex-col items-center gap-4 p-6 pt-12 w-full md:top-[2rem]"
+					>
+						<!-- image -->
+						<div
+							class="absolute -top-[2.5rem] bg-veryDarkViolet rounded-full p-4 md:left-4"
+						>
+							<img src="./images/icon-detailed-records.svg" alt="" />
+						</div>
+						<h3 class="text-xl font-bold text-veryDarkViolet w-full">
+							Detailed records
+						</h3>
+						<p class="text-gray-400">
+							Gain insights into who is clicking your links. Knowing when and
+							where people engage with your content helps inform better
+							decisions.
+						</p>
+					</div>
+					<!-- blue-line -->
+					<div class="blue-line"></div>
+					<!-- card-3 -->
+					<div
+						class="relative bg-white rounded-md flex flex-col items-center gap-4 p-6 pt-12 w-full md:top-[4rem]"
+					>
+						<!-- image -->
+						<div
+							class="absolute -top-[2.5rem] bg-veryDarkViolet rounded-full p-4 md:left-4"
+						>
+							<img src="./images/icon-fully-customizable.svg" alt="" />
+						</div>
+						<h3 class="text-xl font-bold text-veryDarkViolet w-full">
+							Fully customizable
+						</h3>
+						<p class="text-gray-400">
+							Improve brand awareness and content discoverability through
+							customizable links, supercharging audience engagement.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to action section -->
+		<section id="call-to-action">
+			<div
+				class="container mx-auto w-full px-6 py-[6rem] flex flex-col items-center gap-6"
+			>
+				<h2 class="text-white text-center">Boost your links today</h2>
+				<button class="cta">Get Started</button>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer>
+			<div
+				class="text-center md:text-left p-12 bg-veryDarkViolet flex flex-col items-center gap-[4rem] md:flex-row md:items-start md:justify-between md:gap-8"
+			>
+				<img src="./images/logo.svg" alt="" />
+				<!-- features -->
+				<div class="flex flex-col items-center gap-4 text-zinc-400">
+					<h3 class="text-white font-bold text-xl w-full">Features</h3>
+					<a class="hover:text-cyan w-full" href="#">Link shortening</a>
+					<a class="hover:text-cyan w-full" href="#">Branded links</a>
+					<a class="hover:text-cyan w-full" href="#">Analytics</a>
+				</div>
+				<!-- resources -->
+				<div class="flex flex-col items-center gap-4 text-zinc-400">
+					<h3 class="text-white font-bold text-xl w-full">Resources</h3>
+					<a class="hover:text-cyan w-full" href="#">Blog</a>
+					<a class="hover:text-cyan w-full" href="#">Developers</a>
+					<a class="hover:text-cyan w-full" href="#">Support</a>
+				</div>
+				<!-- company -->
+				<div class="flex flex-col items-center gap-4 text-zinc-400">
+					<h3 class="text-white font-bold text-xl w-full">Company</h3>
+					<a class="hover:text-cyan w-full" href="#">About</a>
+					<a class="hover:text-cyan w-full" href="#">Our team</a>
+					<a class="hover:text-cyan w-full" href="#">Careers</a>
+					<a class="hover:text-cyan w-full" href="#">Contact</a>
+				</div>
+				<!-- socials -->
+				<div class="grid grid-cols-4 gap-6">
+					<a href="#">
+						<img src="./images/icon-instagram.svg" alt="" />
+					</a>
+					<a href="#">
+						<img src="./images/icon-twitter.svg" alt="" />
+					</a>
+					<a href="#">
+						<img src="./images/icon-facebook.svg" alt="" />
+					</a>
+					<a href="#">
+						<img src="./images/icon-pinterest.svg" alt="" />
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
